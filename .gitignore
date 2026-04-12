@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+pnpm-store/
+
+# Build outputs
+dist/
+build/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Go
+bin/
+vendor/
+server
+
+# Build artifacts
+*.pb.go
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.envrc
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+pnpm-debug.log*
+
+# Test coverage
+coverage/
+*.out
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Docker
+.dockerignore
+
+# Misc
+*.tsbuildinfo
+*.pot
+*.o
+*.a
+
+# OpenCode internal
+.omc/

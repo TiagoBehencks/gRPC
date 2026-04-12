@@ -1,0 +1,49 @@
+syntax = "proto3";
+option go_package = "github.com/TiagoBehencks/gRPC/api/pb";
+
+package pb;
+
+message Product {
+    string id = 1;
+    string name = 2;
+    double price = 3;
+    int32 quantity = 4;
+}
+
+message CreateProductRequest {
+    string name = 1;
+    double price = 2;
+    int32 quantity = 3;
+}
+
+message GetProductRequest {
+    string id = 1;
+}
+
+message UpdateProductRequest {
+    string id = 1;
+    string name = 2;
+    double price = 3;
+    int32 quantity = 4;
+}
+
+message DeleteProductRequest {
+    string id = 1;
+}
+
+message ListProductsRequest {
+}
+
+message ListProductsResponse {
+    repeated Product products = 1;
+}
+
+message Empty {}
+
+service ProductService {
+    rpc Create(CreateProductRequest) returns (Product);
+    rpc Get(GetProductRequest) returns (Product);
+    rpc Update(UpdateProductRequest) returns (Product);
+    rpc Delete(DeleteProductRequest) returns (Empty);
+    rpc List(ListProductsRequest) returns (ListProductsResponse);
+}
